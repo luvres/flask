@@ -34,3 +34,8 @@ http://localhost:8080/
 ```
 docker build -t izone/flask .
 ```
+
+##### arrmhf
+```
+docker build -t izone/flask:armhf .
+```
