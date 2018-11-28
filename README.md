@@ -35,7 +35,13 @@ http://localhost:8080/
 docker build -t izone/flask .
 ```
 
-##### arrmhf
+##### armhf
 ```
 docker build -t izone/flask:armhf ./armhf/
+```
+```
+docker run -d --restart=always --name Flask \
+-p 8080:80 \
+-v $HOME/1uvr3z/_:/app \
+izone/flask:armhf
 ```
