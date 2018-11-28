@@ -1,4 +1,4 @@
-## Flask with Python 3.6 (Alpine OS)
+## Flask with uWSGI and Python 3.6 into Alpine OS (66.7MB)
 ### All credits for Christian Gatzlaff in https://github.com/jazzdd86/alpine-flask
 -----
 
