@@ -2,7 +2,7 @@ FROM alpine
 MAINTAINER Leonardo Loures <luvres@hotmail.com>
 
 ## References:
-# https://github.com/jazzdd86/alpine-flask
+# All credits for Christian Gatzlaff in https://github.com/jazzdd86/alpine-flask
 
 RUN \
 	apk add --no-cache \
