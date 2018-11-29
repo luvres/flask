@@ -1,5 +1,6 @@
 ## Flask with uWSGI and Python 3.6
-### into Alpine OS (66.7MB)
+### into Alpine OS (66.7MB) in amd64 and armhf too
+### running on my Raspberry PI
 #### All credits for Christian Gatzlaff in https://github.com/jazzdd86/alpine-flask
 -----
 
@@ -35,7 +36,7 @@ http://localhost:8080/
 docker build -t izone/flask .
 ```
 
-##### armhf
+##### armhf (running on my Raspberry PI 3)
 ```
 docker build -t izone/flask:armhf ./armhf/
 ```
