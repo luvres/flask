@@ -2,7 +2,8 @@ FROM alpine
 MAINTAINER Leonardo Loures <luvres@hotmail.com>
 
 ## References:
-# All credits for Christian Gatzlaff in https://github.com/jazzdd86/alpine-flask
+# https://github.com/jazzdd86/alpine-flask
+# https://github.com/publysher/docker-alpine-machine-learning
 
 RUN \
 	apk add --no-cache \
