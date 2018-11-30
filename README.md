@@ -33,6 +33,9 @@ http://localhost:8080/
 ```
 docker build -t izone/flask .
 ```
+```
+docker build -t izone/flask:pandas ./pandas/
+```
 
 -----
 ### Running on my Raspberry PI 3
