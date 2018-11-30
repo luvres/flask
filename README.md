@@ -1,5 +1,6 @@
 ## Flask with uWSGI and Python 3.6
 ### into Alpine OS (66.7MB) in amd64 and armhf too
+### With Pandas, Numpy and Sklearn (321MB)
 ### running on my Raspberry PI
 -----
 
@@ -48,7 +49,22 @@ docker run -d --restart=always --name Flask \
 izone/flask:armhf
 ```
 
+### Docker QEMU
+#### armhf in amd64
+```
+sudo apt-get install qemu-user-static
+```
+
 #### Build
 ```
+sudo apt-get install qemu-user-static binfmt-support
+sudo update-binfmts --enable qemu-arm
+sudo update-binfmts --display qemu-arm 
+cp /usr/bin/qemu-arm-static .
+```
+```
 docker build -t izone/flask:armhf ./armhf/
+```
+```
+docker build -t izone/flask:armhf-ml ./armhf/ml/
 ```
