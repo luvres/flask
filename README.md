@@ -6,7 +6,7 @@
 
 #### Pull image
 ```
-docker pull izone/flask c
+docker pull izone/flask
 ```
 
 #### Run
