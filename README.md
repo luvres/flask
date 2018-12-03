@@ -21,7 +21,7 @@ izone/flask
 docker run -d --restart=always --name Flask \
 -p 8080:80 \
 -v $HOME/1uvr3z/_:/app \
-izone/flask
+izone/flask:nginx-ml
 ```
 
 #### Access Browser
@@ -35,6 +35,12 @@ docker build -t izone/flask .
 ```
 ```
 docker build -t izone/flask:ml ./ml/
+```
+```
+docker build -t izone/flask:nginx ./nginx/
+```
+```
+docker build -t izone/flask:nginx-ml ./nginx/ml/
 ```
 
 -----
