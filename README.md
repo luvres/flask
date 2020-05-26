@@ -1,5 +1,5 @@
-## Flask with uWSGI and Python 3.6
-### into Alpine OS (66.7MB) in amd64 and armhf too
+## Flask with uWSGI and Python 3.8.2
+### into Alpine OS (69.7MB) in amd64 and armhf too
 ### With Pandas, Numpy and Sklearn (321MB)
 ### running on my Raspberry PI
 -----
@@ -41,6 +41,12 @@ docker build -t izone/flask:nginx ./nginx/
 ```
 ```
 docker build -t izone/flask:nginx-ml ./nginx/ml/
+```
+```
+docker build -t izone/flask:build ./build/
+```
+```
+docker build -t izone/flask:pandas ./pandas/
 ```
 
 -----
