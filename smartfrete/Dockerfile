@@ -23,6 +23,7 @@ RUN \
 				requests \
 				openrouteservice \
 				geopy \
+				unidecode \
   \
 	&& chmod 777 /run/ -R \
 	&& chmod 777 /root/ -R \
