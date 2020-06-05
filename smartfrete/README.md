@@ -32,4 +32,7 @@ http://localhost:5000/
 ```
 docker build -t izone/flask:smartfrete ./smartfrete/
 ```
-
+#### Build develop
+```
+docker build -t izone/flask:smartfrete-develop -f ./smartfrete/Dockerfile_develop .
+```
