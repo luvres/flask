@@ -11,6 +11,7 @@ RUN \
 		nginx \
 		uwsgi \
 		uwsgi-python3 \
+		py3-pip \
   \
 	&& pip3 install --upgrade pip \
 	&& pip3 install flask \
