@@ -12,6 +12,7 @@ RUN \
 		nginx \
 		uwsgi \
 		uwsgi-python3 \
+		py3-pip \
 		lapack libstdc++ \
 		libpq \
 	  \
