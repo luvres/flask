@@ -1,4 +1,4 @@
-FROM izone/arm:alpine
+FROM arm32v7/alpine
 MAINTAINER Leonardo Loures <luvres@hotmail.com>
 
 ## References:
