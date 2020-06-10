@@ -75,8 +75,8 @@ sudo update-binfmts --display qemu-arm
 cp /usr/bin/qemu-arm-static .
 ```
 ```
-docker build -t izone/flask:armhf ./armhf/
+docker build -t izone/flask:armhf_qemu ./armhf_qemu/
 ```
 ```
-docker build -t izone/flask:armhf-ml ./armhf/ml/
+docker build -t izone/flask:armhf_qemu-ml ./armhf_qemu/ml/
 ```
