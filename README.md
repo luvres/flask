@@ -55,6 +55,9 @@ docker build -t izone/flask:pandas ./pandas/
 docker build -t izone/flask:armhf ./armhf/
 ```
 ```
+docker build -t izone/flask:armhf-pandas ./armhf/pandas/
+```
+```
 docker run -d --restart=always --name Flask \
 -p 8080:80 \
 -v $HOME/1uvr3z/_:/app \
