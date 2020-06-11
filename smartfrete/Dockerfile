@@ -6,13 +6,14 @@ MAINTAINER Leonardo Loures <luvres@hotmail.com>
 # https://github.com/publysher/docker-alpine-machine-learning
 
 RUN \
-	deps='py3-pip python3-dev g++ gfortran lapack-dev ' \
+	deps='py3-pip python3-dev g++ gfortran lapack-dev postgresql-dev' \
 	&& apk add --no-cache \
 		bash \
 		nginx \
 		uwsgi \
 		uwsgi-python3 \
 		lapack libstdc++ \
+		libpq \
 	  \
 		${deps} \
   \
@@ -24,6 +25,9 @@ RUN \
 				openrouteservice \
 				geopy \
 				unidecode \
+				sqlalchemy \
+				marshmallow_sqlalchemy \
+				psycopg2 \
   \
 	&& chmod 777 /run/ -R \
 	&& chmod 777 /root/ -R \
