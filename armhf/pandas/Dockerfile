@@ -1,4 +1,4 @@
-FROM arm32v7/alpine
+FROM arm32v7/alpine:3.11
 MAINTAINER Leonardo Loures <luvres@hotmail.com>
 
 ## References:
@@ -6,7 +6,7 @@ MAINTAINER Leonardo Loures <luvres@hotmail.com>
 # https://github.com/publysher/docker-alpine-machine-learning
 
 RUN \
-	deps='py3-pip python3-dev g++ gfortran lapack-dev ' \
+	deps='python3-dev g++ gfortran lapack-dev' \
 	&& apk add --no-cache \
 		bash \
 		nginx \

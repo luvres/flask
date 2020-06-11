@@ -1,4 +1,4 @@
-FROM alpine:3.11
+FROM arm32v7/alpine
 MAINTAINER Leonardo Loures <luvres@hotmail.com>
 
 ## References:
@@ -6,17 +6,23 @@ MAINTAINER Leonardo Loures <luvres@hotmail.com>
 # https://github.com/publysher/docker-alpine-machine-learning
 
 RUN \
-	apk add --no-cache \
+	deps='py3-pip ' \
+	&& apk add --no-cache \
 		bash \
 		nginx \
 		uwsgi \
 		uwsgi-python3 \
+		\
+		${deps} \
   \
 	&& pip3 install --upgrade pip \
 	&& pip3 install flask \
   \
 	&& chmod 777 /run/ -R \
-	&& chmod 777 /root/ -R
+	&& chmod 777 /root/ -R \
+  \
+	&& apk del ${deps \
+	&& rm -rf /root/.cache
 
 EXPOSE 80
 
