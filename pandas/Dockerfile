@@ -6,13 +6,12 @@ MAINTAINER Leonardo Loures <luvres@hotmail.com>
 # https://github.com/publysher/docker-alpine-machine-learning
 
 RUN \
-	deps='python3-dev g++ gfortran lapack-dev ' \
+	deps='py3-pip python3-dev g++ gfortran lapack-dev ' \
 	&& apk add --no-cache \
 		bash \
 		nginx \
 		uwsgi \
 		uwsgi-python3 \
-		py3-pip \
 		lapack libstdc++ \
 	  \
 		${deps} \
@@ -25,8 +24,8 @@ RUN \
 	&& chmod 777 /run/ -R \
 	&& chmod 777 /root/ -R \
   \
-  	&& apk del ${deps} \
-  	&& rm -rf /root/.cache
+	&& apk del ${deps} \
+	&& rm -rf /root/.cache
 
 EXPOSE 80
 

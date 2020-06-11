@@ -6,18 +6,23 @@ MAINTAINER Leonardo Loures <luvres@hotmail.com>
 # https://github.com/publysher/docker-alpine-machine-learning
 
 RUN \
-	apk add --no-cache \
+	deps='py3-pip ' \
+	&& apk add --no-cache \
 		bash \
 		nginx \
 		uwsgi \
 		uwsgi-python3 \
-		py3-pip \
+		\
+		${deps} \
   \
 	&& pip3 install --upgrade pip \
 	&& pip3 install flask \
   \
 	&& chmod 777 /run/ -R \
-	&& chmod 777 /root/ -R
+	&& chmod 777 /root/ -R \
+  \
+	&& apk del py3-pip \
+	&& rm -rf /root/.cache
 
 EXPOSE 80
 

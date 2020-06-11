@@ -48,7 +48,9 @@ docker build -t izone/flask:build ./build/
 ```
 docker build -t izone/flask:pandas ./pandas/
 ```
-
+```
+docker build -t izone/flask:alpine-3.11 -f Dockerfile_old .
+```
 -----
 ### Running on my Raspberry PI 3
 ```
