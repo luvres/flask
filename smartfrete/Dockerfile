@@ -30,6 +30,8 @@ RUN \
 				marshmallow_sqlalchemy \
 				psycopg2 \
 				Scrapy \
+				APScheduler \
+				crochet \
 				boltons \
 				config-client \
 				py-eureka-client \
