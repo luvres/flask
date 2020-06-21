@@ -30,6 +30,10 @@ RUN \
 				marshmallow_sqlalchemy \
 				psycopg2 \
 				Scrapy \
+				boltons \
+				config-client \
+				py-eureka-client \
+				PyYAML \
   \
 	&& chmod 777 /run/ -R \
 	&& chmod 777 /root/ -R \
