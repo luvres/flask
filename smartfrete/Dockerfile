@@ -36,6 +36,7 @@ RUN \
 				config-client \
 				py-eureka-client \
 				PyYAML \
+				xlrd \
   \
 	&& chmod 777 /run/ -R \
 	&& chmod 777 /root/ -R \
