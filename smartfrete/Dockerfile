@@ -37,6 +37,7 @@ RUN \
 				py-eureka-client \
 				PyYAML \
 				xlrd \
+				flask_cors \
   \
 	&& chmod 777 /run/ -R \
 	&& chmod 777 /root/ -R \
