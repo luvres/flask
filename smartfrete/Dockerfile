@@ -15,6 +15,7 @@ RUN \
 		lapack libstdc++ \
 		libpq \
 		libxslt \
+		geos \
 	  \
 		${deps} \
   \
