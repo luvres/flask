@@ -39,6 +39,8 @@ RUN \
 				xlrd \
 				flask_cors \
 				flask_jwt_extended \
+				geoalchemy2 \
+				Shapely \
   \
 	&& chmod 777 /run/ -R \
 	&& chmod 777 /root/ -R \
