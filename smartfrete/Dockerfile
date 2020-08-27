@@ -22,6 +22,25 @@ RUN \
 	&& pip3 install --no-cache \
 				flask \
 				pandas \
+				requests \
+				openrouteservice \
+				geopy \
+				unidecode \
+				sqlalchemy \
+				marshmallow_sqlalchemy \
+				psycopg2 \
+				Scrapy \
+				APScheduler \
+				crochet \
+				boltons \
+				config-client \
+				py-eureka-client \
+				PyYAML \
+				xlrd \
+				flask_cors \
+				flask_jwt_extended \
+				geoalchemy2 \
+				Shapely \
   \
 	&& chmod 777 /run/ -R \
 	&& chmod 777 /root/ -R \
