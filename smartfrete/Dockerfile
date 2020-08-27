@@ -21,7 +21,7 @@ RUN \
 	&& pip3 install --upgrade pip \
 	&& pip3 install --no-cache \
 				flask \
-				pandas \
+				pandas==1.0.5 \
 				requests \
 				openrouteservice \
 				geopy \
