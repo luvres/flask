@@ -1,4 +1,4 @@
-FROM izone/flask:smartfrete
+FROM alpine:3.11
 MAINTAINER Leonardo Loures <luvres@hotmail.com>
 
 ## References:
@@ -18,9 +18,10 @@ RUN \
 	  \
 		${deps} \
   \
+	&& pip3 install --upgrade pip \
 	&& pip3 install --no-cache \
-				geoalchemy2 \
-				Shapely \
+				flask \
+				pandas \
   \
 	&& chmod 777 /run/ -R \
 	&& chmod 777 /root/ -R \
@@ -28,4 +29,9 @@ RUN \
 	&& apk del ${deps} \
 	&& rm -rf /root/.cache
 
+EXPOSE 80
 
+COPY nginx.conf /etc/nginx/nginx.conf
+COPY app.ini /app.ini
+
+CMD nginx && uwsgi --ini /app.ini
