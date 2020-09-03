@@ -42,6 +42,7 @@ RUN \
 				flask_jwt_extended \
 				geoalchemy2 \
 				Shapely \
+				XlsxWriter \
   \
 	&& chmod 777 /run/ -R \
 	&& chmod 777 /root/ -R \
