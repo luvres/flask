@@ -7,44 +7,45 @@ MAINTAINER Leonardo Loures <leonardo@exacta.inf.puc-rio.br>
 # https://pkgs.alpinelinux.org/package/edge/community/x86/py3-scikit-learn
 
 RUN \
-	deps='py3-pip python3-dev g++ gfortran lapack-dev postgresql-dev libxml2-dev libxslt-dev libffi-dev geos-dev' \
+	deps='python3-dev g++ gfortran lapack-dev postgresql-dev libxml2-dev libxslt-dev libffi-dev geos-dev' \
 	&& apk add --no-cache \
-		bash \
-		nginx \
-		uwsgi \
-		uwsgi-python3 \
-		lapack libstdc++ \
-		libpq \
-		libxslt \
-		geos \
-	  \
-	  py3-pandas \
-	  py3-scikit-learn \
-		${deps} \
+			bash \
+			nginx \
+			uwsgi \
+			uwsgi-python3 \
+			lapack libstdc++ \
+			libpq \
+			libxslt \
+			geos \
+			\
+			py3-pip \
+			py3-pandas \
+			py3-scikit-learn \
+			${deps} \
   \
 	&& pip3 install --upgrade pip \
 	&& pip3 install --no-cache \
-				flask \
-				requests \
-				openrouteservice \
-				geopy \
-				unidecode \
-				sqlalchemy \
-				marshmallow_sqlalchemy \
-				psycopg2 \
-				Scrapy \
-				APScheduler \
-				crochet \
-				boltons \
-				config-client \
-				py-eureka-client \
-				PyYAML \
-				xlrd \
-				flask_cors \
-				flask_jwt_extended \
-				geoalchemy2 \
-				Shapely \
-				XlsxWriter \
+			flask \
+			requests \
+			openrouteservice \
+			geopy \
+			unidecode \
+			sqlalchemy \
+			marshmallow_sqlalchemy \
+			psycopg2 \
+			Scrapy \
+			APScheduler \
+			crochet \
+			boltons \
+			config-client \
+			py-eureka-client \
+			PyYAML \
+			xlrd \
+			flask_cors \
+			flask_jwt_extended \
+			geoalchemy2 \
+			Shapely \
+			XlsxWriter \
   \
 	&& chmod 777 /run/ -R \
 	&& chmod 777 /root/ -R \
