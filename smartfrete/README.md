@@ -1,5 +1,5 @@
-## Flask with uWSGI and Python 3.8.2
-### With Pandas, requests, openrouteservice, geopy
+## Flask with uWSGI and Python 3.8.7
+### With Pandas, requests, openrouteservice, geopy, sklearn
 -----
 
 #### Pull image
