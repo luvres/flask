@@ -17,11 +17,12 @@ RUN \
 			libpq \
 			libxslt \
 			geos \
-			\
+		\
+			${deps} \
+		\
 			py3-pip \
 			py3-pandas \
 			py3-scikit-learn \
-			${deps} \
   \
 	&& pip3 install --upgrade pip \
 	&& pip3 install --no-cache \
