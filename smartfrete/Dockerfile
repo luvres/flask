@@ -7,25 +7,25 @@ MAINTAINER Leonardo Loures <leonardo@exacta.inf.puc-rio.br>
 # https://pkgs.alpinelinux.org/package/edge/community/x86/py3-scikit-learn
 
 RUN \
-	deps='python3-dev g++ gfortran lapack-dev postgresql-dev libxml2-dev libxslt-dev libffi-dev geos-dev' \
+	deps='g++ gfortran lapack-dev postgresql-dev libxml2-dev libxslt-dev libffi-dev geos-dev' \
 	&& apk add --no-cache \
 			bash \
 			nginx \
 			uwsgi \
 			uwsgi-python3 \
+			py3-pip \
+		\
+			${deps} \
+		\
 			lapack libstdc++ \
 			libpq \
 			libxslt \
 			geos \
-		\
-			${deps} \
-		\
-			py3-pip \
 			py3-pandas \
 			py3-scikit-learn \
   \
-	&& pip3 install --upgrade pip \
-	&& pip3 install --no-cache \
+	&& pip install --upgrade pip \
+	&& pip install --no-cache \
 			flask \
 			requests \
 			openrouteservice \

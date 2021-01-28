@@ -1,4 +1,4 @@
-FROM alpine:3.11
+FROM alpine:3.13
 MAINTAINER Leonardo Loures <luvres@hotmail.com>
 
 ## References:
@@ -11,12 +11,16 @@ RUN \
 		nginx \
 		uwsgi \
 		uwsgi-python3 \
+		py3-pip \
   \
-	&& pip3 install --upgrade pip \
-	&& pip3 install flask \
+	&& pip install --upgrade pip \
+	&& pip install --no-cache \
+			flask \
   \
 	&& chmod 777 /run/ -R \
-	&& chmod 777 /root/ -R
+	&& chmod 777 /root/ -R \
+  \
+	&& rm -rf /root/.cache
 
 EXPOSE 80
 

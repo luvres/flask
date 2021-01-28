@@ -7,28 +7,25 @@ MAINTAINER Leonardo Loures <luvres@hotmail.com>
 # https://pkgs.alpinelinux.org/package/edge/community/x86/py3-scikit-learn
 
 RUN \
-	deps='python3-dev g++ gfortran lapack-dev ' \
-	&& apk add --no-cache \
+	apk add --no-cache \
 			bash \
 			nginx \
 			uwsgi \
 			uwsgi-python3 \
-			lapack libstdc++ \
-		\
-			${deps} \
-		\
 			py3-pip \
+		\
+			py3-scipy \
+			py3-numpy \
 			py3-pandas \
 			py3-scikit-learn \
   \
-	&& pip3 install --upgrade pip \
-	&& pip3 install --no-cache \
-			flask 			
+	&& pip install --upgrade pip \
+	&& pip install --no-cache \
+			flask \
   \
 	&& chmod 777 /run/ -R \
 	&& chmod 777 /root/ -R \
   \
-  	&& apk del ${deps} \
   	&& rm -rf /root/.cache
 
 EXPOSE 80

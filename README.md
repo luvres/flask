@@ -1,9 +1,9 @@
-## Flask with uWSGI and Python 3.8.2
-### into Alpine OS (69.7MB) in amd64 and armhf too
-### With Pandas, Numpy and Sklearn (321MB)
+## Flask with uWSGI and Python 3.8.7
+### into Alpine OS (75.9MB) in amd64 and armhf too
+### With Pandas, Numpy, Scipy and Sklearn (341MB)
 ### running on my Raspberry PI
 -----
-
+			
 #### Pull image
 ```
 docker pull izone/flask

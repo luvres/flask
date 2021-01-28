@@ -9,17 +9,17 @@ MAINTAINER Leonardo Loures <leonardo@exacta.inf.puc-rio.br>
 # https://stackoverflow.com/questions/57724082/how-do-i-install-msodbcsql17-driver-for-alpine-linux
 
 RUN \
-	deps='python3-dev g++ gfortran lapack-dev postgresql-dev libxml2-dev libxslt-dev libffi-dev geos-dev build-base unixodbc-dev freetds-dev curl gnupg' \
+	deps='g++ unixodbc-dev freetds-dev curl gnupg' \
 	&& apk add --no-cache \
 			bash \
 			nginx \
 			uwsgi \
 			uwsgi-python3 \
-			unixodbc \
+			py3-pip \
 		\
 			${deps} \
 		\
-			py3-pip \
+			unixodbc \
 			py3-scipy \
 			py3-numpy \
 			py3-pandas \
@@ -41,8 +41,8 @@ RUN \
 	&& apk add --allow-untrusted mssql-tools_17.6.1.1-1_amd64.apk \
 	&& rm ms* \
   \
-	&& pip3 install --upgrade pip \
-	&& pip3 install --no-cache \
+	&& pip install --upgrade pip \
+	&& pip install --no-cache \
 			flask \
 			graphviz \
 			pyodbc \
