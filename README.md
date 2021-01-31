@@ -34,8 +34,18 @@ http://localhost:8080/
 docker build -t izone/flask .
 ```
 ```
+docker build -t izone/flask:pandas ./pandas/
+```
+```
 docker build -t izone/flask:ml ./ml/
 ```
+```
+docker build -t izone/flask:processmining ./processmining/
+```
+```
+docker build -t izone/flask:smartfrete ./smartfrete/
+```
+-----
 ```
 docker build -t izone/flask:nginx ./nginx/
 ```
@@ -44,9 +54,6 @@ docker build -t izone/flask:nginx-ml ./nginx/ml/
 ```
 ```
 docker build -t izone/flask:build ./build/
-```
-```
-docker build -t izone/flask:pandas ./pandas/
 ```
 ```
 docker build -t izone/flask:alpine-3.11 -f Dockerfile_old .

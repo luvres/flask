@@ -8,6 +8,9 @@ MAINTAINER Leonardo Loures <leonardo@exacta.inf.puc-rio.br>
 # https://docs.microsoft.com/en-us/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server?view=sql-server-ver15
 # https://stackoverflow.com/questions/57724082/how-do-i-install-msodbcsql17-driver-for-alpine-linux
 
+ENV UWSGI_MODULE="app:app" \
+		PYTHONPATH=/app
+
 RUN \
 	deps='g++ unixodbc-dev freetds-dev curl gnupg' \
 	&& apk add --no-cache \

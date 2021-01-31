@@ -6,6 +6,9 @@ MAINTAINER Leonardo Loures <leonardo@exacta.inf.puc-rio.br>
 # https://github.com/publysher/docker-alpine-machine-learning
 # https://pkgs.alpinelinux.org/package/edge/community/x86/py3-scikit-learn
 
+ENV UWSGI_MODULE="app:app" \
+		PYTHONPATH=/app
+
 RUN \
 	deps='g++ gfortran lapack-dev postgresql-dev libxml2-dev libxslt-dev libffi-dev geos-dev' \
 	&& apk add --no-cache \

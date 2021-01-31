@@ -1,25 +1,26 @@
-FROM alpine:3.11
+FROM alpine:3.13
 MAINTAINER Leonardo Loures <luvres@hotmail.com>
 
 ## References:
 # https://github.com/jazzdd86/alpine-flask
 # https://github.com/publysher/docker-alpine-machine-learning
 
+ENV UWSGI_MODULE="app:app" \
+		PYTHONPATH=/app
+
 RUN \
-	deps='python3-dev g++ gfortran lapack-dev' \
-	&& apk add --no-cache \
-		bash \
-		nginx \
-		uwsgi \
-		uwsgi-python3 \
-		lapack libstdc++ \
-	  \
-		${deps} \
+	apk add --no-cache \
+			bash \
+			nginx \
+			uwsgi \
+			uwsgi-python3 \
+			py3-pip \
+		\
+			py3-pandas \
   \
 	&& pip3 install --upgrade pip \
 	&& pip3 install --no-cache \
 				flask \
-				pandas \
   \
 	&& chmod 777 /run/ -R \
 	&& chmod 777 /root/ -R \
