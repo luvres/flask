@@ -11,10 +11,20 @@ docker pull izone/flask
 
 #### Run
 ```
-docker run -ti --rm --name Flask \
+docker run --rm --name app \   
 -p 8080:80 \
+-e PYTHONPATH=/app \
+-e UWSGI_MODULE="app:app" \
 -v $HOME/1uvr3z/_:/app \
-izone/flask
+-ti izone/flask
+```
+```
+docker run --rm --name app \   
+-p 8080:80 \
+-e PYTHONPATH=/app \
+-e UWSGI_MODULE="app:create_app()" \
+-v $HOME/1uvr3z/_:/app \
+-ti izone/flask
 ```
 #### Background
 ```
