@@ -31,7 +31,7 @@ RUN \
 	&& pip install --no-cache \
 			flask \
 			flask_cors \
-			flask_jwt_extended \
+			flask_jwt_extended==3.25.1 \
 			sqlalchemy \
 			marshmallow_sqlalchemy \
 			psycopg2-binary \
