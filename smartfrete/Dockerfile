@@ -44,7 +44,7 @@ RUN \
 			config-client \
 			py-eureka-client \
 			PyYAML \
-			xlrd \
+			xlrd==1.2.0 \
 			flask_cors \
 			flask_jwt_extended \
 			geoalchemy2 \
