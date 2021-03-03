@@ -46,7 +46,7 @@ RUN \
 			PyYAML \
 			xlrd==1.2.0 \
 			flask_cors \
-			flask_jwt_extended \
+			flask_jwt_extended==3.25.1 \
 			geoalchemy2 \
 			Shapely \
 			XlsxWriter \
