@@ -1,4 +1,4 @@
-FROM alpine:3.13
+FROM alpine:3.14
 MAINTAINER Leonardo Loures <leonardo@exacta.inf.puc-rio.br>
 
 ## References:
