@@ -33,7 +33,7 @@ RUN \
 			flask_cors \
 			flask_jwt_extended==3.25.1 \
 			sqlalchemy \
-			marshmallow_sqlalchemy \
+			marshmallow_sqlalchemy==0.25.0 \
 			psycopg2-binary \
 			unidecode \
 			openpyxl \
