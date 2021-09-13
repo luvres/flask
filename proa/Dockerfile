@@ -5,6 +5,8 @@ MAINTAINER Leonardo Loures <leonardo@exacta.inf.puc-rio.br>
 # https://github.com/jazzdd86/alpine-flask
 # https://github.com/publysher/docker-alpine-machine-learning
 # https://pkgs.alpinelinux.org/package/edge/community/x86/py3-scikit-learn
+# https://docs.microsoft.com/en-us/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server?view=sql-server-ver15
+# https://stackoverflow.com/questions/57724082/how-do-i-install-msodbcsql17-driver-for-alpine-linux
 
 ENV UWSGI_MODULE="app:app" \
 		PYTHONPATH=/app

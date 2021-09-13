@@ -1,4 +1,4 @@
-FROM alpine:3.13
+FROM alpine:3.14
 MAINTAINER Leonardo Loures <leonardo@exacta.inf.puc-rio.br>
 
 ## References:
@@ -18,14 +18,16 @@ RUN \
 			nginx \
 			uwsgi \
 			uwsgi-python3 \
+			graphviz ttf-freefont \
 			py3-pip \
 		\
 			${deps} \
 		\
 			unixodbc \
-			py3-scipy \
-			py3-numpy \
 			py3-pandas \
+			py3-numpy \
+			py3-scipy \
+#			py3-graphviz 
   \
   # Download the desired package(s)
 	&& curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.6.1.1-1_amd64.apk \
@@ -46,9 +48,14 @@ RUN \
   \
 	&& pip install --upgrade pip \
 	&& pip install --no-cache \
-			flask \
+			Flask \
+			flask-cors \
+			flasgger \
+			python-dotenv \
 			graphviz \
 			pyodbc \
+			Flask-JWT-Extended \
+			PyJWT \
   \
 	&& chmod 777 /run/ -R \
 	&& chmod 777 /root/ -R \
