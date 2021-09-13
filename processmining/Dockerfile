@@ -27,7 +27,6 @@ RUN \
 			py3-pandas \
 			py3-numpy \
 			py3-scipy \
-#			py3-graphviz 
   \
   # Download the desired package(s)
 	&& curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.6.1.1-1_amd64.apk \
