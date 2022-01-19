@@ -36,6 +36,8 @@ RUN \
 				python-dateutil \
 				waitress \
   \
+  && ln -s /usr/bin/python3 /usr/bin/python \
+  \
 	&& chmod 777 /run/ -R \
 	&& chmod 777 /root/ -R \
   \
