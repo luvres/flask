@@ -1,0 +1,50 @@
+FROM arm64v8/alpine:3.15
+MAINTAINER Leonardo Loures <luvres@hotmail.com>
+
+## References:
+# https://github.com/jazzdd86/alpine-flask
+# https://github.com/publysher/docker-alpine-machine-learning
+# https://number1.co.za/alpine-python-docker-base-image-problem-with-gcc/
+
+ENV UWSGI_MODULE="app:app" \
+		PYTHONPATH=/app
+
+RUN \
+  deps='g++ python3-dev' \
+	&& apk add --no-cache \
+			bash \
+			nginx \
+			uwsgi \
+			uwsgi-python3 \
+			py3-pip \
+		\
+			${deps} \
+		\
+			py3-pandas \
+			py3-numpy \
+  \
+	&& pip3 install --upgrade pip \
+	&& pip3 install --no-cache \
+				flask \
+				flask-login \
+				flask-seasurf \
+				dash \
+				dash-auth \
+				dash-bootstrap-components \
+				pymongo \
+				requests \
+				python-dateutil \
+				waitress \
+  \
+	&& chmod 777 /run/ -R \
+	&& chmod 777 /root/ -R \
+  \
+	&& apk del ${deps} \
+	&& rm -rf /root/.cache
+
+EXPOSE 80
+
+COPY nginx.conf /etc/nginx/nginx.conf
+COPY app.ini /app.ini
+
+CMD nginx && uwsgi --ini /app.ini

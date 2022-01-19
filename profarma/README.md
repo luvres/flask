@@ -30,7 +30,9 @@ http://localhost:5000/
 -----
 #### Build
 ```
-docker build --no-cache -t izone/flask:profarma -f ./profarma/Dockerfile .
+docker build -t izone/flask:profarma -f ./profarma/Dockerfile .
+
+docker build -t izone/flask:profarma-arm64 -f ./profarma/Dockerfile.arm64 .
 
 ```
 
