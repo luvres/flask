@@ -1,0 +1,10 @@
+FROM izone/flask:profarma
+MAINTAINER Leonardo Loures <luvres@hotmail.com>
+
+COPY . /app
+WORKDIR /app
+
+ENV PYTHONPATH=/app
+ENV UWSGI_MODULE="app:server"
+
+RUN chmod 0755 /app/main.py
